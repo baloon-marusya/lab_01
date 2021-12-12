@@ -1,4 +1,4 @@
-Copyright 2021 Maria Melnikova dandelion.m@mail.ru
+//Copyright 2021 Maria Melnikova dandelion.m@mail.ru
 #ifndef INCLUDE_EXAMPLE_HPP_
 #define INCLUDE_EXAMPLE_HPP_
 
