@@ -1,3 +1,4 @@
+Copyright 2021 Maria Melnikova dandelion.m@mail.ru
 #include "example.hpp"
 
 void get_student(const json &j, Student &student) {
