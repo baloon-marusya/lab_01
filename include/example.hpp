@@ -1,5 +1,6 @@
-#ifndef LAB_01_PARSER_FOR_PARSING_HPP
-#define LAB_01_PARSER_FOR_PARSING_HPP
+Copyright 2021 Maria Melnikova dandelion.m@mail.ru
+#ifndef INCLUDE_EXAMPLE_HPP_
+#define INCLUDE_EXAMPLE_HPP_
 
 #include <cstdlib>
 #include <any>
@@ -7,6 +8,8 @@
 #include <iomanip>
 #include <fstream>
 #include <nlohmann/json.hpp>
+#include <string>
+#include <vector>
 
 #include "example.hpp"
 
@@ -36,4 +39,4 @@ void print_all_students(const std::vector<Student> &students, std::ostream &os);
 
 void print_a_student(const Student &student, std::ostream &os);
 
-#endif // LAB_01_PARSER_FOR_PARSING_HPP
+#endif  // INCLUDE_EXAMPLE_HPP_
