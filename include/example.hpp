@@ -13,9 +13,6 @@
 
 #include "example.hpp"
 
-using namespace nlohmann;
-using namespace std;
-
 struct Student {
   std::string name;
   std::any group;
