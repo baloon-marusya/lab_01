@@ -22,15 +22,15 @@ struct Student {
 
 void get_student(const nlohmann::json &j, Student &student);
 
-ifstream json_file(const string &path_to_file);
+std::ifstream json_file(const std::string &path_to_file);
 
-auto get_name(const json &j) -> std::string;
+auto get_name(const nlohmann::json &j) -> std::string;
 
-auto get_debt(const json &j) -> std::any;
+auto get_debt(const nlohmann::json &j) -> std::any;
 
-auto get_avg(const json &j) -> std::any;
+auto get_avg(const nlohmann::json &j) -> std::any;
 
-auto get_group(const json &j) -> std::any;
+auto get_group(const nlohmann::json &j) -> std::any;
 
 void print_all_students(const std::vector<Student> &students, std::ostream &os);
 
