@@ -1,6 +1,24 @@
 //Copyright 2021 Maria Melnikova dandelion.m@mail.ru
 #include "example.hpp"
 
+std::vector<Student> list_students(nlohmann::json &data) {
+  if (!data.at("items").is_array()) {
+    throw std::invalid_argument{"The items in the file must be an array!"};
+  }
+  if (data.at("items").size() !=
+      data.at("_meta").at("count").get<size_t>()) {
+    throw std::invalid_argument{"Value in _meta incorrect"};
+  }
+  std::vector<Student> students;
+  for (auto const &item : data.at("items")) {
+    Student student;
+    get_student(item, student);
+    students.push_back(student);
+  }
+  return students;
+}
+
+
 void get_student(const nlohmann::json &j, Student &student) {
   student.name = get_name(j.at("name"));
   student.group = get_group(j.at("group"));
