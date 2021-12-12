@@ -2,16 +2,11 @@
 
 int main() {
   //принимаем файл json и анализируем, то ли нам дают
-  const str::string path = "/home/baloon/lab-01-parser/tests/list.json";
+  const std::string path = "/home/baloon/lab-01-parser/tests/list.json";
 
   nlohmann::json data;
   json_file(path) >> data;
 
-  if (!data.at("items").is_array()) {
-    throw runtime_error{"The items in the file must be an array!"};
-  }
-  if (data.at("items").size() != data.at("_meta").at("count").get<size_t>()) {
-    throw runtime_error{"Value in _meta incorrect"};
-  }
+  print_all_students(list_students(data), std::cout);
   return 0;
 }
