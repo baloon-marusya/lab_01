@@ -2,9 +2,9 @@
 
 int main() {
   //принимаем файл json и анализируем, то ли нам дают
-  const string path = "/home/baloon/lab-01-parser/tests/list.json";
+  const str::string path = "/home/baloon/lab-01-parser/tests/list.json";
 
-  json data;
+  nlohmann::json data;
   json_file(path) >> data;
 
   if (!data.at("items").is_array()) {
