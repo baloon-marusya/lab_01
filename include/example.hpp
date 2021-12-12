@@ -19,6 +19,7 @@ struct Student {
   std::any avg;
   std::any debt;
 };
+std::vector<Student> list_students(nlohmann::json &data);
 
 void get_student(const nlohmann::json &j, Student &student);
 
